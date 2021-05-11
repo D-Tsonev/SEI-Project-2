@@ -38,17 +38,16 @@ function Home() {
   return (
     <main>
       <div>
-        <section>
-          <h1>Everyday Holiday</h1>
-          <p>
-              Welcome to "Everyday Holiday"! Your friendly neighbourhood API
-              that displays all holidays for any country all the way up to 2048!
-              Just select your country and year and click "GO!" to view all
-              holidays for the country of your choice!
-          </p>
+        <h1>EVERYDAY HOLIDAY</h1>
+        <h2>Welcome to "Everyday Holiday"!</h2>
+        <p>
+          Your friendly neighbourhood API that displays all holidays for any
+          country all the way up to 2048! Select country, year and press "GO!"
+        </p>
+        <section className="choices">
           <select onChange={handleSelect} value={selectedCountry}>
             <option value="" disabled selected>
-                Select Country
+              Select Country
             </option>
             {countries
               ? countries.response.countries.map((country) => (
@@ -61,12 +60,10 @@ function Home() {
               ))
               : console.error('No countries!')}
           </select>
-          
-        </section>
-        <section className="choices">
+
           <select onChange={handleSelectedYear} value={selectedYear}>
             <option value="" disabled selected>
-                Select Year
+              Select Year
             </option>
             <option>2021</option>
             <option>2022</option>
