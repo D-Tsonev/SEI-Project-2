@@ -1,22 +1,22 @@
+//* Imports
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { getAllCountries } from '../../lib/api'
+
 
 function Home() {
   const [countries, setCountries] = React.useState(null)
-
   const [setIsError] = React.useState(false)
-  // const isLoading = !countries && !isError
-
   const [selectedCountry, setSelecteCountry] = React.useState('')
   const [selectedYear, setSelectedYear] = React.useState('')
 
+
+  //* Gets a list of all countries and stores them in setCountries variable
   React.useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(
-          'https://calendarific.com/api/v2/countries?api_key=693d3ccc7451ce37aad5fb8f2e88fe7355c16bcd'
-        )
+        const response = await getAllCountries()
         setCountries(response.data)
       } catch (error) {
         setIsError(true)
@@ -25,6 +25,8 @@ function Home() {
     getData()
   }, [])
 
+
+  //* Select handlers
   const handleSelect = (e) => {
     setSelecteCountry(e.target.value)
   }
@@ -32,35 +34,39 @@ function Home() {
   const handleSelectedYear = (e) => {
     setSelectedYear(e.target.value)
   }
-  // console.log(selectedCountry)
-  // console.log(selectedYear)
+
 
   return (
     <main>
       <div>
         <h1>EVERYDAY HOLIDAY</h1>
-        <h2>Welcome to "Everyday Holiday"!</h2>
-        <p>
-          Your friendly neighbourhood API that displays all holidays for any
-          country all the way up to 2048! Select country, year and press "GO!"
+        <h2>Welcome to 'Everyday Holiday'!</h2>
+        <p>          Your friendly neighbourhood API that displays all holidays for any
+          country all the way up to 2048! Select country, year and press 'GO!'
         </p>
-        <section className="choices">
+
+        <section className="choices"
+        //* Select dropdown that displays all countries
+        >
           <select onChange={handleSelect} value={selectedCountry}>
             <option value="" disabled selected>
               Select Country
             </option>
-            {countries
-              ? countries.response.countries.map((country) => (
-                <option
-                  key={country.country_name}
-                  value={country['iso-3166']}
-                >
+
+            {countries ? (
+              //* Maps through the setCountries array are returns all country names, plus ID of the country (iso-3166) which is passed to the URL.
+              countries.response.countries.map((country) => (
+                <option key={country.country_name} value={country['iso-3166']}>
                   {country.country_name}
                 </option>
               ))
-              : console.error('No countries!')}
+            ) : (
+              <option value="" disabled selected>
+                ...Loading
+              </option>
+            )}
           </select>
-
+ 
           <select onChange={handleSelectedYear} value={selectedYear}>
             <option value="" disabled selected>
               Select Year
@@ -94,9 +100,15 @@ function Home() {
             <option>2047</option>
             <option>2048</option>
           </select>
-          <Link to={`/holidays/${selectedCountry}/${selectedYear}`}>
-            <button>GO!</button>
-          </Link>
+
+          {selectedYear && selectedCountry ? (
+           
+            <Link to={`/holidays/${selectedCountry}/${selectedYear}`}>
+              <button>GO!</button>
+            </Link>
+          ) : (
+            <strong></strong>
+          )}
         </section>
       </div>
     </main>
