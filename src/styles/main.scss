@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 800px;
+  text-align: center;
+  
+}
+button {
+  margin-top: 10px;
+}
+
+.choices {
+
+}
+
+.HolidayCard {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 800px;
+
+}
+h5 {
+margin-right: 50px;
+}
+
+h4 {
+margin-right: 150px;
+}
