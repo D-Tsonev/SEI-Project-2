@@ -1,6 +1,5 @@
 //* Imports
 import React from 'react'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { getAllCountries } from '../../lib/api'
 
@@ -66,7 +65,7 @@ function Home() {
               </option>
             )}
           </select>
- 
+
           <select onChange={handleSelectedYear} value={selectedYear}>
             <option value="" disabled selected>
               Select Year
@@ -101,8 +100,7 @@ function Home() {
             <option>2048</option>
           </select>
 
-          {selectedYear && selectedCountry ? (
-           
+          {selectedYear && selectedCountry ? ( 
             <Link to={`/holidays/${selectedCountry}/${selectedYear}`}>
               <button>GO!</button>
             </Link>
