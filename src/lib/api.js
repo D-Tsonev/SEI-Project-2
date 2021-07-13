@@ -2,13 +2,10 @@ import axios from 'axios'
 
 
 //* Token to access API
-const dimiToken = 'a5c619062b4b39330a32e442ed2c1d5c6a29aa11'
-
+const dimiToken = 'a2e54ca29fc0cdebd9174c197aad413cf21d6833'
 
 //* Base URL
 const holidayUrl = `https://calendarific.com/api/v2/holidays?api_key=${dimiToken}`
-
-
 
 
 //* Requests

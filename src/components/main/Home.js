@@ -10,7 +10,6 @@ function Home() {
   const [selectedCountry, setSelecteCountry] = React.useState('')
   const [selectedYear, setSelectedYear] = React.useState('')
 
-
   //* Gets a list of all countries and stores them in setCountries variable
   React.useEffect(() => {
     const getData = async () => {
@@ -22,7 +21,7 @@ function Home() {
       }
     }
     getData()
-  }, [])
+  }, [setIsError])
 
 
   //* Select handlers
@@ -39,9 +38,9 @@ function Home() {
     <main>
       <div>
         <h1>EVERYDAY HOLIDAY</h1>
-        <h2>Welcome to 'Everyday Holiday'!</h2>
+        <h2>Welcome to Everyday Holiday!</h2>
         <p>          Your friendly neighbourhood API that displays all holidays for any
-          country all the way up to 2048! Select country, year and press 'GO!'
+          country all the way up to 2048! Select country, year and press GO!
         </p>
 
         <section className="choices"

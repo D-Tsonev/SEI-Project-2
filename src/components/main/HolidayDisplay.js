@@ -1,10 +1,7 @@
 import React from 'react'
-
-
 import { useParams } from 'react-router-dom'
 import { getSingleCountry } from '../../lib/api'
 import { useHistory } from 'react-router-dom'
-
 
 function HolidayDisplay() {
   const { id, year } = useParams()
@@ -36,7 +33,7 @@ function HolidayDisplay() {
         {singleCountry ?
           (<button onClick={handleBack}>Back</button>) && (
 
-            //* Maps through the singleCountry object returning title, year, and description of holiday
+            // * Maps through the singleCountry object returning title, year, and description of holiday
             singleCountry.response.holidays.map((holiday) => (
               <div className="holiday-view" key={holiday.name}>
                 <h3>{holiday.name}</h3> 
