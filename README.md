@@ -230,7 +230,7 @@ Once the data was retrieved, it was relatively easy to <code>map</code> into arr
 ```
 Once these were finalised we spent our last half day styling the app and ensuring that our app was responsive to various screen sizes.
 
-<img src= './images/responsive_home.png' width="430" />  <img src= './images/responsive_card.png' width="430"/>
+<img src= './images/responsive_home.png' width="400" />  <img src= './images/responsive_card.png' width="400"/>
 
 ## Challanges
 
