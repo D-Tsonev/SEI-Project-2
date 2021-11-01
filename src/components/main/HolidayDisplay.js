@@ -22,6 +22,7 @@ function HolidayDisplay() {
 
   //* Back button handler
   function handleBack(){
+    
     history.push('')
   }
 

@@ -12,11 +12,6 @@ My second project with General Assembly was a 48-hour 'hackathon' to build a mul
 
 My partner, [Guy Kozlovskij ](https://github.com/guykozlovskij) and I decided to built a mobile-friendly app that displays all local holidays for all countries.
 
-## Members 
-
-- Guy Kozlovskij - [GitHub](https://github.com/guykozlovskij)
-
-- Dimitar Tsonev - [GitHub](https://github.com/D-Tsonev)
 
 ## Deployment
 
@@ -34,6 +29,7 @@ Build a React application that consumes a public API during a 48-hour hackathon 
 - Include wireframes that we designed before building the app.
 - Be deployed online and accessible to the public.
 - A git repository hosted on Github, with a link to our hosted project and frequent commits dating back to the very beginning of the project.
+- Sick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
 
 ## Technologies Used
 
@@ -61,12 +57,12 @@ Build a React application that consumes a public API during a 48-hour hackathon 
 
 ## General Approach & Planning
 
-We first had to choose an API we wanted to use. My partner and I realised we both have a passion for travelling and we love to explore different culture, so we decided to use the [Calendarific API](https://calendarific.com/).
+We first had to choose an API we wanted to use. My partner and I realised we both have a passion for travelling and we love to explore different cultures, so we decided to use the [Calendarific API](https://calendarific.com/).
 
 <img src= './images/API.png'  />
 
 We spent a short time planning and once we had a clear idea we jumped straight into coding. 
-Our first task was to ensure that we could get the Countries names to appear on our page.
+Our first task was to ensure that we could get the countries names to appear on our page.
 
 We created а function using Axios to fetch data from the API:
 
@@ -232,9 +228,9 @@ Once these were finalised we spent our last half day styling the app and ensurin
 
 <img src= './images/responsive_home.png' width="400" />  <img src= './images/responsive_card.png' width="400"/>
 
-## Challanges
+## Challenges
 
-The most difficult part of our project was the logic behind the url reqest expected for the Holiday Card.
+The most difficult part of our project was the logic behind the url request expected for the Holiday Card.
 <code>'https://calendarific.com/api/v2/holidays?&api_key=baa9dc110aa712sd3a9fa2a3dwb6c01d4c875950dc32vs&country=UK&year=2021'</code>                    
 The request needs to contain country code stored under value: iso-3166  and that was the trickiest part.
 We had to create two different functions: one for the Home page, displaying a list of all countries, and another using the country code and year to display the Holiday card.
@@ -244,4 +240,9 @@ We had to create two different functions: one for the Home page, displaying a li
 This was my first pair project, and overall the dynamic worked well producing an application we were proud of.
 I learnt a lot about collaborating, communicating, planning,using Live Share to work on the same code in real-time. This worked well enough for this short project, but I probably would not use this for a bigger project when it would be more useful to divide and conquer.
 One aspect that I would improve for the next group or pair project is the delegation of different tasks. In my opinion, we spent too much time screen-sharing on the same tasks when these could have easily been delegated, allowing us more time to add more features to our finished application.
+
+## Future Features
+
+To create a better user experience, I will implement a filter function that will display holidays filtered by national, local, religious and observance.
+
 
