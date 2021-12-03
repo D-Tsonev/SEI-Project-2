@@ -28,7 +28,7 @@ Build a React application that consumes a public API during a 48-hour hackathon 
 - The app can have a router with several "pages", which was up to our discretion if it made sense for our project.
 - Include wireframes that we designed before building the app.
 - Be deployed online and accessible to the public.
-- A git repository hosted on Github, with a link to our hosted project and frequent commits dating back to the very beginning of the project.
+- A git repository hosted on Git & GitHub, with a link to our hosted project and frequent commits dating back to the very beginning of the project.
 - Sick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
 
 ## Technologies Used
